@@ -9,10 +9,10 @@ import {
     Globe
 } from 'lucide-react';
 
-import img1 from "../assets/web/img1.webp";
-import img2 from "../assets/web/img2.jpg";
-import img3 from "../assets/web/img3.png";
-import img4 from "../assets/web/img4.png";
+import img1 from "../assets/Web/img1.webp";
+import img2 from "../assets/Web/img2.jpg";
+import img3 from "../assets/Web/img3.png";
+import img4 from "../assets/Web/img4.png";
 
 
 
