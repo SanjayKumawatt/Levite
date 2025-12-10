@@ -2,6 +2,7 @@ import React from 'react';
 import { CheckCircle, ArrowRight, Code, Smartphone, Layers, Box } from 'lucide-react';
 import img1 from "../assets/mobile/img1.png";
 import img2 from "../assets/mobile/img2.png";
+import { Link } from 'react-router-dom';
 
 // --- REUSABLE COMPONENT: Section Header with Blue Underline ---
 const SectionHeader = ({ title }) => (
@@ -16,8 +17,8 @@ const SectionHeader = ({ title }) => (
 
 // --- REUSABLE COMPONENT: Linked Button ---
 const LinkButton = ({ text, href, className }) => (
-  <a 
-    href={href} 
+  <a
+    href={href}
     className={`inline-block px-8 py-3 rounded-md font-bold text-sm uppercase transition-transform hover:-translate-y-0.5 ${className}`}
   >
     {text}
@@ -46,17 +47,17 @@ const ProcessStep = ({ number, title, description, isReversed }) => (
       <h4 className="text-blue-800 font-bold text-lg uppercase mb-2">{title}</h4>
       <p className="text-gray-600 text-sm">{description}</p>
     </div>
-    
+
     {/* Hexagonal Icon Placeholder (Simulating the image style) */}
     <div className="relative flex-shrink-0 z-10">
-        <div className="w-20 h-20 bg-blue-900 text-orange-400 flex items-center justify-center font-bold text-2xl relative overflow-hidden" style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}>
-           {/* Placeholder for the specific icon graphic in the image */}
-           <span>{number}</span>
-           <div className="absolute bottom-0 left-0 w-full h-1/3 bg-blue-800 opacity-50"></div>
-        </div>
+      <div className="w-20 h-20 bg-blue-900 text-orange-400 flex items-center justify-center font-bold text-2xl relative overflow-hidden" style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}>
+        {/* Placeholder for the specific icon graphic in the image */}
+        <span>{number}</span>
+        <div className="absolute bottom-0 left-0 w-full h-1/3 bg-blue-800 opacity-50"></div>
+      </div>
     </div>
 
-     {/* Balancing empty space for the other side */}
+    {/* Balancing empty space for the other side */}
     <div className="hidden md:block w-full md:w-1/2"></div>
   </div>
 );
@@ -65,12 +66,12 @@ const ProcessStep = ({ number, title, description, isReversed }) => (
 const MobileAppDevelopmentPage = () => {
   return (
     <div className="font-sans bg-white">
-      
+
       {/* ================= HERO SECTION ================= */}
       {/* Using the dark blue color from the image header */}
       <section className="bg-[#2C4A78] py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 md:px-12 lg:px-24 flex flex-col md:flex-row items-center gap-12">
-          
+
           {/* Left Text Content */}
           <div className="w-full md:w-1/2 space-y-6">
             <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
@@ -80,22 +81,21 @@ const MobileAppDevelopmentPage = () => {
               We build high-quality, robust, and scalable mobile applications that deliver superior user experiences and drive business growth.
               {/* (Note: Replaced generic placeholder text from image with relevant text, as image text was blurry/lorem ipsum style) */}
             </p>
-            
+
             {/* LINKED BUTTON as requested */}
             <div className="pt-4">
-              <LinkButton 
-                text="Let's Talk" 
-                href="/contact"  // Replace with your actual contact link
-                className="bg-orange-500 text-white hover:bg-orange-600"
-              />
+              <Link
+                className="rounded-lg py-3 px-5 bg-orange-500 text-white hover:bg-orange-600"
+                to={"/contact"}>Let's Talk</Link>
+
             </div>
           </div>
 
           {/* Right Image Placeholder */}
           <div className="w-full md:w-1/2 flex justify-center">
-             {/* Replace this div with your actual isometric illustration image tag */}
+            {/* Replace this div with your actual isometric illustration image tag */}
             <img src={img1} alt="" />
-            
+
           </div>
         </div>
       </section>
@@ -115,7 +115,7 @@ const MobileAppDevelopmentPage = () => {
               <p className="text-gray-600 mb-6">
                 Here are some of the mobile app solutions offered by our company:
               </p>
-              
+
               {/* Using a grid for the list to match the compact look */}
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 text-gray-700 font-medium">
                 {[
@@ -153,22 +153,22 @@ const MobileAppDevelopmentPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             {/* Using Lucide icons as placeholders for the specific orange icons in the image */}
-            <TechCard 
+            <TechCard
               icon={<Code size={32} />}
               title="React Native"
               description="A popular JavaScript framework for building natively rendering mobile applications for iOS and Android."
             />
-            <TechCard 
+            <TechCard
               icon={<Smartphone size={32} />}
               title="Swift for iOS"
               description="A powerful and intuitive programming language for macOS, iOS, watchOS, and tvOS."
             />
-            <TechCard 
+            <TechCard
               icon={<layers size={32} />} // Using generic icon, Kotlin logo is specific
               title="Kotlin for Android"
               description="A modern, statically typed programming language that boosts productivity and increases developer happiness."
             />
-            <TechCard 
+            <TechCard
               icon={<Box size={32} />} // Using generic icon, Flutter logo is specific
               title="Flutter"
               description="A UI toolkit from Google for creating beautiful, natively compiled applications for mobile, web, and desktop from a single codebase."
@@ -182,24 +182,24 @@ const MobileAppDevelopmentPage = () => {
       <section className="py-16 md:py-24 px-4 md:px-12 lg:px-24 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <SectionHeader title="OUR MOBILE APPLICATION DEVELOPMENT PROCESS" />
-          
+
           <div className="mt-16 relative">
             {/* Vertical connecting line (simulated) - Hidden on mobile, visible on desktop */}
             <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-orange-200 transform -translate-x-1/2 -z-10"></div>
 
-            <ProcessStep 
+            <ProcessStep
               number="01"
               title="DISCOVERY & PLANNING"
               description="We understand your business requirements and objectives, then strategize to create the most efficient mobile application."
               isReversed={false}
             />
-             <ProcessStep 
+            <ProcessStep
               number="02"
               title="DESIGN & DEVELOPMENT"
               description="Leveraging the latest UI/UX trends, we design and develop a mobile app that is both aesthetically pleasing and functional."
               isReversed={true} // Flipped layout for the middle step
             />
-             <ProcessStep 
+            <ProcessStep
               number="03"
               title="TESTING & DEPLOYMENT"
               description="We conduct thorough testing to ensure the mobile app is bug-free and fully functional before deployment."

@@ -13,6 +13,7 @@ import img1 from "../assets/Web/img1.webp";
 import img2 from "../assets/Web/img2.jpg";
 import img3 from "../assets/Web/img3.png";
 import img4 from "../assets/Web/img4.png";
+import { Link } from 'react-router-dom';
 
 
 
@@ -83,9 +84,9 @@ const WebDevelopmentPage = () => {
                             We build robust, scalable, and secure web applications tailored to your business needs using the latest technologies.
                         </p>
                         <div className="pt-4">
-                            <a href="/contact" className="inline-block bg-[#D4A017] hover:bg-[#b88a12] text-white px-8 py-3 rounded font-bold uppercase transition-transform hover:scale-105 shadow-lg">
+                            <Link to={"/contact"} className="inline-block bg-[#D4A017] hover:bg-[#b88a12] text-white px-8 py-3 rounded font-bold uppercase transition-transform hover:scale-105 shadow-lg">
                                 Start Now
-                            </a>
+                            </Link>
                         </div>
                     </div>
 

@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 
 import img from "../assets/social.png";
+import { Link } from 'react-router-dom';
 
 // --- REUSABLE COMPONENT: Section Header ---
 const SectionHeader = ({ title }) => (
@@ -70,12 +71,12 @@ const SocialMediaPage = () => {
             </p>
             
             <div className="pt-6">
-              <a 
-                href="/contact" 
+              <Link
+                to={"/contact"} 
                 className="inline-block bg-[#D4A017] hover:bg-[#b88a12] text-white px-8 py-3 rounded-md font-bold text-sm uppercase transition-transform hover:-translate-y-1 shadow-lg"
               >
                 Start Now
-              </a>
+              </Link>
             </div>
           </div>
 

@@ -8,6 +8,7 @@ import {
   MonitorSmartphone,
   ArrowRight
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 // --- REUSABLE COMPONENT: Section Header ---
 const SectionHeader = ({ title }) => (
@@ -97,12 +98,12 @@ const UiUxDesignPage = () => {
             
             {/* LINKED BUTTON */}
             <div>
-              <a 
-                href="/contact" 
+              <Link 
+                to={"/contact"} 
                 className="inline-block bg-[#D4A017] hover:bg-[#b88a12] text-white px-8 py-3.5 rounded-md font-bold text-sm uppercase transition-all shadow-lg hover:shadow-orange-500/20"
               >
-                Schedule a call
-              </a>
+                Let's talk
+              </Link>
             </div>
           </div>
 

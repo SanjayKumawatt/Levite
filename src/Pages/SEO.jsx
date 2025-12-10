@@ -16,6 +16,7 @@ import {
 
 import img1 from "../assets/seo/img1.png";
 import img2 from "../assets/seo/img2.png";
+import { Link } from 'react-router-dom';
 
 // --- REUSABLE COMPONENT: Section Header ---
 const SectionHeader = ({ title }) => (
@@ -57,9 +58,9 @@ const SeoServicePage = () => {
               Search Engine Optimization (SEO) is a crucial aspect of digital marketing aimed at improving a website's visibility and ranking on search engine results pages (SERPs).
             </p>
             <div className="pt-4">
-              <a href="/contact" className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 px-8 py-3.5 rounded-md font-bold text-sm uppercase transition-all shadow-lg inline-flex items-center gap-2">
+              <Link to={"/contact"} className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 px-8 py-3.5 rounded-md font-bold text-sm uppercase transition-all shadow-lg inline-flex items-center gap-2">
                 Get Started <ArrowRight size={18} />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -216,9 +217,9 @@ const SeoServicePage = () => {
               SEO is no longer a method of link-building. Some of the deciding factors for a website to rank higher are architecturally sound coding, faster loading speed of the sites, website responsiveness across devices, and insightful content.
             </p>
             <div className="pt-2">
-               <a href="/about" className="text-[#1E3A8A] font-bold border-b-2 border-yellow-500 pb-1 hover:text-yellow-600 transition-colors">
+               <Link to={"/about"} className="text-[#1E3A8A] font-bold border-b-2 border-yellow-500 pb-1 hover:text-yellow-600 transition-colors">
                  Learn More About Us
-               </a>
+               </Link>
             </div>
           </div>
 
